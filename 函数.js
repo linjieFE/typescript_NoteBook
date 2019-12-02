@@ -43,9 +43,6 @@ show1('jenny', 19); //=>jenny，19 有默认值 不传输入出默认值，传�
 var sum = show2(1, 2, 3, 4, 5, 6, 7, 8);
 //例中 1对应x,2->y ,x=>[3,4,5,6,7,8]
 console.log(sum); //=>36
-//3.函数的重载
-// function getInfo(name:string):void
-// function getInfo(name:number):void
 function getInfo(str) {
     if (typeof str === 'string') {
         console.log("我的英文名叫：" + str);

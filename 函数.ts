@@ -45,9 +45,9 @@ show1('jenny',19)//=>jenny，19 有默认值 不传输入出默认值，传则�
 var sum = show2(1,2,3,4,5,6,7,8)
 //例中 1对应x,2->y ,x=>[3,4,5,6,7,8]
 console.log(sum)//=>36
-//3.函数的重载
+//3.函数的重载(在C#中重载是相同函数名字，但参数和类型不同)
 function getInfo(name:string):void
-function getInfo(name:number):void
+function getInfo(age:number):void//参数类型不同，
 function getInfo(str:any):void{
     if(typeof str==='string'){
         console.log("我的英文名叫："+str)
@@ -56,5 +56,5 @@ function getInfo(str:any):void{
         console.log("年龄"+str+'岁')
     }
 }
-getInfo("jenny")
-getInfo(18)
+getInfo("jenny")//参数是string类型，运行 49 行函数
+getInfo(18)//参数是string类型，运行 50 行函数
