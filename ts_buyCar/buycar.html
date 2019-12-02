@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding:0;
+        }
+        .header li,
+        #box li{
+            float: left;
+            list-style: none;
+            padding:5px 20px; 
+            width: 20%;
+            box-sizing: border-box;
+        }
+        .header,
+        #box,
+        #box ul{
+            width: 100%;
+            display: block;
+            clear: both;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>购物车</h1>
+    <ul class="header">
+        <li>勾选</li>
+        <li>名称</li>
+        <li>描述</li>
+        <li>单价</li>
+        <li>数量</li>
+    </ul>
+    <hr/>
+    <div id="box">
+
+    </div>
+    <hr/>
+    <p>总价：<span id="sumPrice"></span></p>
+
+    <script src="car.js"></script>
+</body>
+</html>
