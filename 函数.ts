@@ -34,7 +34,7 @@ function show1(name:string,age:number=20):void{
 function show2(x:number,y:number,...z:number[]):number{
     var sum=0
     for(let i=0;i<z.length;i++){
-      sum+=x[i]
+      sum+=z[i]
     }
     return x+y+sum
 }
@@ -45,3 +45,16 @@ show1('jenny',19)//=>jenny，19 有默认值 不传输入出默认值，传则�
 var sum = show2(1,2,3,4,5,6,7,8)
 //例中 1对应x,2->y ,x=>[3,4,5,6,7,8]
 console.log(sum)//=>36
+//3.函数的重载
+function getInfo(name:string):void
+function getInfo(name:number):void
+function getInfo(str:any):void{
+    if(typeof str==='string'){
+        console.log("我的英文名叫："+str)
+    }
+    if(typeof str==='number'){
+        console.log("年龄"+str+'岁')
+    }
+}
+getInfo("jenny")
+getInfo(18)
